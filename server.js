@@ -5,10 +5,12 @@ const http = require("http");
 const port = process.env.PORT || 8080;
 const host = process.env.HOST || 'localhost';
 
+const title = process.env.TITLE
+
 const server = http.createServer((req, res) => {
     console.log(`${req.method} | ${req.url} effettuata`);
     res.writeHead(200, { "Content-Type": "text/html"});
-    res.end("<h1>Hello Wold</h1>");
+    res.end(`<h1>${title}</h1>`);
 
 });
 
