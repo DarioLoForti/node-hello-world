@@ -23,6 +23,11 @@ function getRandomQuote() {
 
 const server = http.createServer((req, res) => {
     console.log(`${req.method} | ${req.url} effettuata`);
+    if(req.url === '/favicon.ico'){
+        res.writeHead(404);
+        res.end();
+        return;
+    }
     res.writeHead(200, { "Content-Type": "text/html" });
     const randomQuote = getRandomQuote();
     res.end(`<h1>${title}</h1><p>${randomQuote}</p>`);
