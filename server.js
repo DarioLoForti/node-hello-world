@@ -6,7 +6,7 @@ const port = process.env.PORT || 8080;
 const host = process.env.HOST || 'localhost';
 
 const title = process.env.TITLE;
-console.log('Title:', title); // Debug
+
 
 const quotes = [
     "La vita è come andare in bicicletta. Per mantenere l'equilibrio devi muoverti.",
